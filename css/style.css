@@ -201,6 +201,7 @@ body {
 @media (max-height: 768px) {
     .title-holder {
         padding-top: 2vh;
+        top: 20px;
     }
     
     .card-container {
