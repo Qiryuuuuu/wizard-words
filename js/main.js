@@ -21,10 +21,12 @@ musicIcon.addEventListener('click', (e) => {
     if(music){
         menuMusic.pause();
         music = false;
+        musicIcon.classList.add('grayed')
         console.log("Music is pause")
     }else{
         menuMusic.play();
         music = true;
+        musicIcon.classList.remove('grayed')
         console.log("Music is playing")
     }
 })

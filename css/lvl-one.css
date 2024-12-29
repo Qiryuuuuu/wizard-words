@@ -1,0 +1,27 @@
+:root{
+    --primary-color: #FFEBBD;
+    --black: #291F1F;
+    --sub: #fff2d4;
+}
+
+@font-face {
+    font-family: 'pixefy';
+    src: url(../font/PixelifySans-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'pixefy';
+}
+
+body {
+    background-image: url('../img/bg-one.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
