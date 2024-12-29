@@ -4,13 +4,20 @@ const enterPhrase = document.querySelector('.press-enter')
 const menuMusic = document.getElementById('bgMusic')
 menuMusic.load();
 
+let musicHasStarted = false;
 
-document.addEventListener('click', () => {
-    menuMusic.play();
-    overlay.classList.add('hidden');
-    overlayContent.classList.add('hidden');
-    enterPhrase.classList.add('hidden')
-})
+const startInteraction = () => {
+    if(!musicHasStarted){
+        menuMusic.play();
+        overlay.classList.add('hidden');
+        overlayContent.classList.add('hidden');
+        enterPhrase.classList.add('hidden')
+        musicHasStarted = true;
+        document.removeEventListener('click' , startInteraction)
+    }
+}
+
+document.addEventListener('click', startInteraction);
 
 
 const musicIcon = document.querySelector('.sound-icon')
