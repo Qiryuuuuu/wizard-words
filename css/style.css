@@ -141,6 +141,7 @@ body {
     font-weight: 600;
     font-size: clamp(2rem, 4vw, 3.5rem);
 }
+
 .card-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -164,10 +165,12 @@ body {
     position: relative;
     width: 100%;
 }
+
 .level-title img {
     width: 100%;
     height: auto;
 }
+
 .level-title p{
     position: absolute;
     top: 50%;

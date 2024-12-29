@@ -18,10 +18,85 @@
 
 body {
     background-image: url('../img/bg-one.png');
+    backdrop-filter: blur(15px);
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat; 
     min-height: 100vh; 
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: -1;
+}
+
+.card-content{
+    display: flex;
+    gap: 15px;
+}
+
+.level-content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.level-img{
+    width: 500px;
+    height: auto;
+    max-width: 100%;
+}
+
+.content-holder{
+    position: relative;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-holder {
+    display: block;
+    width: 100%;
+}
+
+.holder-content{
+    position: absolute;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    z-index: 1;
+    text-align: center;
+}
+
+.level-description p{
+    max-width: 30vw;
+    line-height: 2;
+}
+
+.level-menu{
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.menu-actions{
+    transition:  0.1s ease-out;
+    cursor: pointer;
+}
+
+.menu-actions:hover {
+    transform: translateY(-10px);
 }
