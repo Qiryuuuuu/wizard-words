@@ -85,3 +85,25 @@
     width: 100%;
 }
 
+@media (max-width: 400px) {
+    .overlay-header{
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .overlay-img{
+        max-width: 200px;
+    }
+
+    .overlay-text-holder{
+        width: 75%;
+    }
+
+    .header-content p{
+        font-size: 1rem;
+    }
+
+    .overlay-message p{
+        font-size: 0.7rem;
+    }
+}

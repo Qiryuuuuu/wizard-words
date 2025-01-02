@@ -83,7 +83,7 @@ body::before {
 }
 
 .level-description p{
-    max-width: 30vw;
+    width: 80%;
     line-height: 2;
 }
 
@@ -102,4 +102,74 @@ body::before {
 
 .menu-actions:hover {
     transform: translateY(-10px);
+}
+
+@media (max-width: 400px) {
+    .card-content{
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .level-img{
+        width: 200px;
+    }
+
+    .level-title{
+        margin: auto;
+    }
+
+    .level-title img{
+        width: 75%;
+        height: auto;
+    }
+
+    .level-title p{
+        font-size: 1rem;
+    }
+
+    .level-description img{
+        width: 90%;
+    }
+
+    .level-description p {
+        max-width: 70vw;
+        font-size: 0.7rem;
+    }
+
+    .level-menu{
+        margin-top: 5px;
+        gap: 5px;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .text-holder{
+        width: 200px;
+        height: auto;
+    }
+
+    .back-icon{
+        width: 58px;
+    }
+
+    .start-btn{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .level-img {
+        max-width: 300px;
+    }
+
+    .level-description p {
+        max-width: 80vw;
+    }
 }
