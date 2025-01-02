@@ -40,6 +40,10 @@ body::before {
     z-index: -1;
 }
 
+.hidden{
+    display: none;
+}
+
 .card-content{
     display: flex;
     gap: 15px;

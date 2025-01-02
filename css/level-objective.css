@@ -1,0 +1,87 @@
+:root{
+    --primary-color: #FFEBBD;
+    --black: #291F1F;
+    --sub: #fff2d4;
+}
+
+@font-face {
+    font-family: 'pixefy';
+    src: url(../font/PixelifySans-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'pixefy';
+}
+
+.overlay-content{
+    display: none;
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+.overlay-message {
+    position: relative;
+    width: 100%;
+}
+
+.overlay-message img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-message p{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: var(--primary-color);
+    width: 80%;
+    font-family: 'pixefy';
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 2;
+    text-align: center;
+}
+
+.press-enter{
+    color: var(--sub);
+    text-align: center;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    margin-top: 5vh;
+}
+
+.overlay-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.overlay-img{
+    width: 100%;
+    max-width: 100px;
+}
+
+.header-content{
+    position: relative;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-text-holder{
+    display: block;
+    width: 100%;
+}
+
