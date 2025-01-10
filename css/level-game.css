@@ -1,0 +1,31 @@
+:root {
+    --primary-color: #FFEBBD;
+    --black: #291F1F;
+    --sub: #fff2d4;
+    --spacing-sm: clamp(0.5rem, 1vw, 1rem);
+    --spacing-md: clamp(1rem, 2vw, 2rem);
+    --spacing-lg: clamp(1.5rem, 3vw, 3rem);
+}
+
+@font-face {
+    font-family: 'pixefy';
+    src: url(../font/PixelifySans-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'pixefy';
+}
+
+
+.game-countdown{
+    color: var(--primary-color);
+    font-size: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

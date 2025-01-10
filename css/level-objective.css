@@ -1,7 +1,10 @@
-:root{
+:root {
     --primary-color: #FFEBBD;
     --black: #291F1F;
     --sub: #fff2d4;
+    --spacing-sm: clamp(0.5rem, 1vw, 1rem);
+    --spacing-md: clamp(1rem, 2vw, 2rem);
+    --spacing-lg: clamp(1.5rem, 3vw, 3rem);
 }
 
 @font-face {
@@ -9,101 +12,152 @@
     src: url(../font/PixelifySans-Regular.ttf);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'pixefy';
 }
 
-.overlay-content{
-    display: none;
+.overlay {
     position: fixed;
-    top: 50%; 
-    left: 50%; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+
+.overlay-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: min(90%, 800px);
+    padding: var(--spacing-md);
+    z-index: 101;
+}
+
+.overlay-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: var(--spacing-lg);
+    width: 100%;
+    justify-content: center;
+}
+
+.overlay-img {
+    width: clamp(80px, 15vw, 100px);
+    height: auto;
+    object-fit: contain;
+}
+
+.header-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-text-holder {
+    width: clamp(150px, 30vw, 300px);
+    height: auto;
+}
+
+.header-content p {
+    position: absolute;
+    color: var(--primary-color);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    text-align: center;
     width: 90%;
-    max-width: 800px;
 }
 
 .overlay-message {
     position: relative;
     width: 100%;
+    margin: 0 auto;
 }
 
 .overlay-message img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
-.overlay-message p{
+.overlay-message p {
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: var(--primary-color);
-    width: 80%;
-    font-family: 'pixefy';
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    line-height: 2;
+    width: 90%;
+    font-size: clamp(0.875rem, 2vw, 1.2rem);
+    line-height: 1.6;
     text-align: center;
+    padding: var(--spacing-sm);
 }
 
-.press-enter{
+.press-enter {
     color: var(--sub);
     text-align: center;
     font-size: clamp(0.8rem, 1.5vw, 1rem);
-    margin-top: 5vh;
+    margin-top: var(--spacing-lg);
+    animation: pulse 2s infinite;
 }
 
-.overlay-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 30px;
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
 }
 
-.overlay-img{
-    width: 100%;
-    max-width: 100px;
+/* Tablet Breakpoint */
+@media (max-width: 768px) {
+    .overlay-content {
+        width: 95%;
+    }
+
+    .overlay-header {
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .overlay-message br {
+        display: none;
+    }
 }
 
-.header-content{
-    position: relative;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.overlay-text-holder{
-    display: block;
-    width: 100%;
-}
-
-@media (max-width: 400px) {
-    .overlay-header{
+/* Mobile Breakpoint */
+@media (max-width: 480px) {
+    .overlay-header {
         flex-direction: column;
-        margin-bottom: 15px;
+        gap: var(--spacing-sm);
     }
 
-    .overlay-img{
-        max-width: 200px;
+    .overlay-img {
+        width: clamp(120px, 30vw, 200px);
     }
 
-    .overlay-text-holder{
-        width: 75%;
+    .overlay-text-holder {
+        width: clamp(180px, 50vw, 250px);
     }
 
-    .header-content p{
-        font-size: 1rem;
+    .header-content p {
+        font-size: clamp(0.875rem, 4vw, 1rem);
     }
 
-    .overlay-message p{
-        font-size: 0.7rem;
+    .overlay-message p {
+        font-size: clamp(0.75rem, 3vw, 0.875rem);
+        width: 85%;
+    }
+
+    .press-enter {
+        font-size: clamp(0.7rem, 2.5vw, 0.8rem);
+        margin-top: var(--spacing-md);
     }
 }

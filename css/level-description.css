@@ -22,11 +22,8 @@ body {
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat; 
-    min-height: 100vh; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+
 }
 
 body::before {
@@ -38,6 +35,14 @@ body::before {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3); 
     z-index: -1;
+}
+
+.lvl-container{
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hidden{
@@ -90,8 +95,6 @@ body::before {
 .level-menu{
     display: flex;
     gap: 15px;
-    justify-content: flex-end;
-    align-items: center;
     margin-top: 25px;
 }
 
@@ -103,6 +106,8 @@ body::before {
 .menu-actions:hover {
     transform: translateY(-10px);
 }
+
+
 
 @media (max-width: 400px) {
     .card-content{

@@ -6,6 +6,7 @@
     <title>Wizard and Words</title>
     <link rel="stylesheet" href="../css/level-description.css">
     <link rel="stylesheet" href="../css/level-objective.css">
+    <link rel="stylesheet" href="../css/level-game.css">
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <script src="/js/lvl-one.js" defer></script>
 </head>
@@ -31,14 +32,15 @@
             </div>
         </div>
 
-        <div class="level-menu">
-            <a href="/index.html">
-                <img src="/img/back-icon.png" alt="" class="back-icon menu-actions">
-            </a>
-
-            <div class="content-holder start-btn menu-actions">
-                <img src="/img/text-holder.png" alt="" class="text-holder">
-                <p class="holder-content">Start</p>
+        <div class="menu-wrapper">
+            <div class="level-menu">
+                <a href="/index.html">
+                    <img src="/img/back-icon.png" alt="" class="back-icon menu-actions">
+                </a>
+                <div class="content-holder start-btn menu-actions">
+                    <img src="/img/text-holder.png" alt="" class="text-holder">
+                    <p class="holder-content">Start</p>
+                </div>
             </div>
         </div>
     </div>
@@ -60,6 +62,18 @@
         </div>
 
         <p class="press-enter">click anywhere to start the game!</p>
+    </div>
+
+    <div class="game-start">
+        <p class="game-countdown"></p>
+
+        <div class="game-header">
+            <div class="game-title">
+                <img src="/img/text-holder.png" alt="" class="overlay-text-holder">
+                <p class="holder-content">Tome of Beginning</p>
+            </div>
+                <img src="../img/pause-icon.png" alt="">
+        </div>
     </div>
 
 </body>

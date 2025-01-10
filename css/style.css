@@ -91,6 +91,13 @@ body {
     text-align: center;
     font-size: clamp(0.8rem, 1.5vw, 1rem);
     margin-top: 5vh;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
 }
 
 .sound-icon{
@@ -190,8 +197,15 @@ body {
     transition:  0.1s ease-out;
     cursor: pointer;
 }
+
 .level-img:hover {
     transform: translateY(-10px) scale(1.05);
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
 }
 
 @media (max-width: 1024px) {
